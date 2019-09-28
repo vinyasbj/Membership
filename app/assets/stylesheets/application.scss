@@ -1,0 +1,16 @@
+@import "bootstrap";
+.session {
+    max-width: 30%;
+    margin: auto;
+    // padding: 35px;
+    // font-size: xx-large;
+}
+
+@media screen and (max-width: 450px) {
+    .session {
+        max-width: 60%;
+        margin: auto;
+        // padding: 35px;
+        // font-size: xx-large;
+    }
+}
