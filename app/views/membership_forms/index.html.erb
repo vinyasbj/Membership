@@ -1,0 +1,107 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Membership Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Father name</th>
+      <th>Mother name</th>
+      <th>Age</th>
+      <th>Dob</th>
+      <th>Sex</th>
+      <th>Blood group</th>
+      <th>Local address</th>
+      <th>Local pin</th>
+      <th>L mobile no</th>
+      <th>L tele no</th>
+      <th>Kodagu address</th>
+      <th>K pin</th>
+      <th>K mobile no</th>
+      <th>K tele no</th>
+      <th>Nominee of death fund</th>
+      <th>Form date</th>
+      <th>Applicants sign</th>
+      <th>Husband name</th>
+      <th>Husbands mother name</th>
+      <th>Wifes name</th>
+      <th>No family members</th>
+      <th>Occupation</th>
+      <th>Proposer family name</th>
+      <th>Proposer mobile</th>
+      <th>Proposer tele</th>
+      <th>Proposer memebership no</th>
+      <th>Proposer sign</th>
+      <th>Seconder family name</th>
+      <th>Seconder mobile</th>
+      <th>Seconder tele</th>
+      <th>Seconder memebership no</th>
+      <th>Seconder sign</th>
+      <th>Status</th>
+      <th>User</th>
+      <th>Membership fee</th>
+      <th>Receipt no</th>
+      <th>Cash dd</th>
+      <th>Receipt date</th>
+      <th>President sign</th>
+      <th>Hon secretary sign</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @membership_forms.each do |membership_form| %>
+      <tr>
+        <td><%= membership_form.name %></td>
+        <td><%= membership_form.father_name %></td>
+        <td><%= membership_form.mother_name %></td>
+        <td><%= membership_form.age %></td>
+        <td><%= membership_form.dob %></td>
+        <td><%= membership_form.sex %></td>
+        <td><%= membership_form.blood_group %></td>
+        <td><%= membership_form.local_address %></td>
+        <td><%= membership_form.local_pin %></td>
+        <td><%= membership_form.l_mobile_no %></td>
+        <td><%= membership_form.l_tele_no %></td>
+        <td><%= membership_form.kodagu_address %></td>
+        <td><%= membership_form.k_pin %></td>
+        <td><%= membership_form.k_mobile_no %></td>
+        <td><%= membership_form.k_tele_no %></td>
+        <td><%= membership_form.nominee_of_death_fund %></td>
+        <td><%= membership_form.form_date %></td>
+        <td><%= membership_form.applicants_sign %></td>
+        <td><%= membership_form.husband_name %></td>
+        <td><%= membership_form.husbands_mother_name %></td>
+        <td><%= membership_form.wifes_name %></td>
+        <td><%= membership_form.no_family_members %></td>
+        <td><%= membership_form.occupation %></td>
+        <td><%= membership_form.proposer_family_name %></td>
+        <td><%= membership_form.proposer_mobile %></td>
+        <td><%= membership_form.proposer_tele %></td>
+        <td><%= membership_form.proposer_memebership_no %></td>
+        <td><%= membership_form.proposer_sign %></td>
+        <td><%= membership_form.seconder_family_name %></td>
+        <td><%= membership_form.seconder_mobile %></td>
+        <td><%= membership_form.seconder_tele %></td>
+        <td><%= membership_form.seconder_memebership_no %></td>
+        <td><%= membership_form.seconder_sign %></td>
+        <td><%= membership_form.status %></td>
+        <td><%= membership_form.user_id %></td>
+        <td><%= membership_form.membership_fee %></td>
+        <td><%= membership_form.receipt_no %></td>
+        <td><%= membership_form.cash_dd %></td>
+        <td><%= membership_form.receipt_date %></td>
+        <td><%= membership_form.president_sign %></td>
+        <td><%= membership_form.hon_secretary_sign %></td>
+        <td><%= link_to 'Show', membership_form %></td>
+        <td><%= link_to 'Edit', edit_membership_form_path(membership_form) %></td>
+        <td><%= link_to 'Destroy', membership_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Membership Form', new_membership_form_path %>

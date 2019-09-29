@@ -1,0 +1,2 @@
+class MembershipForm < ApplicationRecord
+end

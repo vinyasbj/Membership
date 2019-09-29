@@ -1,0 +1,222 @@
+<%= form_with(model: membership_form, local: true) do |form| %>
+  <% if membership_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(membership_form.errors.count, "error") %> prohibited this membership_form from being saved:</h2>
+
+      <ul>
+      <% membership_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :father_name %>
+    <%= form.text_field :father_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mother_name %>
+    <%= form.text_field :mother_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blood_group %>
+    <%= form.text_field :blood_group %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local_address %>
+    <%= form.text_area :local_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :local_pin %>
+    <%= form.number_field :local_pin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :l_mobile_no %>
+    <%= form.text_field :l_mobile_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :l_tele_no %>
+    <%= form.text_field :l_tele_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kodagu_address %>
+    <%= form.text_area :kodagu_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :k_pin %>
+    <%= form.number_field :k_pin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :k_mobile_no %>
+    <%= form.text_field :k_mobile_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :k_tele_no %>
+    <%= form.text_field :k_tele_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nominee_of_death_fund %>
+    <%= form.text_field :nominee_of_death_fund %>
+  </div>
+
+  <div class="field">
+    <%= form.label :form_date %>
+    <%= form.date_select :form_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :applicants_sign %>
+    <%= form.text_field :applicants_sign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :husband_name %>
+    <%= form.text_field :husband_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :husbands_mother_name %>
+    <%= form.text_field :husbands_mother_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wifes_name %>
+    <%= form.text_field :wifes_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :no_family_members %>
+    <%= form.number_field :no_family_members %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occupation %>
+    <%= form.text_field :occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposer_family_name %>
+    <%= form.text_field :proposer_family_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposer_mobile %>
+    <%= form.text_field :proposer_mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposer_tele %>
+    <%= form.text_field :proposer_tele %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposer_memebership_no %>
+    <%= form.text_field :proposer_memebership_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :proposer_sign %>
+    <%= form.text_field :proposer_sign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seconder_family_name %>
+    <%= form.text_field :seconder_family_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seconder_mobile %>
+    <%= form.text_field :seconder_mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seconder_tele %>
+    <%= form.text_field :seconder_tele %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seconder_memebership_no %>
+    <%= form.text_field :seconder_memebership_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seconder_sign %>
+    <%= form.text_field :seconder_sign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :membership_fee %>
+    <%= form.text_field :membership_fee %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipt_no %>
+    <%= form.text_field :receipt_no %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cash_dd %>
+    <%= form.text_field :cash_dd %>
+  </div>
+
+  <div class="field">
+    <%= form.label :receipt_date %>
+    <%= form.date_select :receipt_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :president_sign %>
+    <%= form.text_field :president_sign %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hon_secretary_sign %>
+    <%= form.text_field :hon_secretary_sign %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
