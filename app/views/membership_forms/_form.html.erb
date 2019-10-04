@@ -10,213 +10,234 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class= "container">
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">Name with Initials and Family Name</label>
+    <div class="col-sm-8">
+      <%= form.text_field :name ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :father_name %>
-    <%= form.text_field :father_name %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">Father’s Name with Family Name</label>
+    <div class="col-sm-8">
+      <%= form.text_field :father_name ,class:"form-control", style:"border: 0;outline: 0;background: transparent;border-bottom: 1px solid black;"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :mother_name %>
-    <%= form.text_field :mother_name %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">Mother’s Name with Family Name (Thamane)</label>
+    <div class="col-sm-8">
+    <%= form.text_field :mother_name ,class:"form-control"%>
+    </div>
+  </div>
+  <h4>IF MARRIED</h4>
+
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">(a) Husband’s Name with Family Name</label>
+    <div class="col-sm-8">
+    <%= form.text_field :husband_name ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">(b) Husband’s Mother’s Family Name</label>
+    <div class="col-sm-8">
+    <%= form.text_field :husbands_mother_name  ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :dob %>
-    <%= form.date_select :dob %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">(c) Wife’s Name with Family Name (Thamane) </label>
+    <div class="col-sm-8">
+      <%= form.text_field :wifes_name  ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :sex %>
-    <%= form.text_field :sex %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label">(d) Number of members in the family</label>
+    <div class="col-sm-8">
+      <%= form.number_field :no_family_members ,class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :blood_group %>
-    <%= form.text_field :blood_group %>
+  <div class="form-group row">
+    <label class="col-sm-4 col-form-label"> (e) Occupation of the Members</label>
+    <div class="col-sm-8">
+      <%= form.text_field :occupation  ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :local_address %>
-    <%= form.text_area :local_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :local_pin %>
-    <%= form.number_field :local_pin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :l_mobile_no %>
-    <%= form.text_field :l_mobile_no %>
-  </div>
-
-  <div class="field">
-    <%= form.label :l_tele_no %>
-    <%= form.text_field :l_tele_no %>
-  </div>
-
-  <div class="field">
-    <%= form.label :kodagu_address %>
-    <%= form.text_area :kodagu_address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :k_pin %>
-    <%= form.number_field :k_pin %>
-  </div>
-
-  <div class="field">
-    <%= form.label :k_mobile_no %>
-    <%= form.text_field :k_mobile_no %>
-  </div>
-
-  <div class="field">
-    <%= form.label :k_tele_no %>
-    <%= form.text_field :k_tele_no %>
-  </div>
-
-  <div class="field">
-    <%= form.label :nominee_of_death_fund %>
-    <%= form.text_field :nominee_of_death_fund %>
-  </div>
-
-  <div class="field">
-    <%= form.label :form_date %>
-    <%= form.date_select :form_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :applicants_sign %>
-    <%= form.text_field :applicants_sign %>
-  </div>
-
-  <div class="field">
-    <%= form.label :husband_name %>
-    <%= form.text_field :husband_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :husbands_mother_name %>
-    <%= form.text_field :husbands_mother_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :wifes_name %>
-    <%= form.text_field :wifes_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :no_family_members %>
-    <%= form.number_field :no_family_members %>
-  </div>
-
-  <div class="field">
-    <%= form.label :occupation %>
-    <%= form.text_field :occupation %>
-  </div>
-
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :proposer_family_name %>
-    <%= form.text_field :proposer_family_name %>
+    <div class="col-sm-8">
+      <%= form.text_field :proposer_family_name  ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
+    <%= form.label :age %>
+    <%= form.number_field :age  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :dob %>
+    <%= form.date_select :dob ,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :sex %>
+    <%= form.text_field :sex ,class:"form-control" %>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :blood_group %>
+    <%= form.text_field :blood_group  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :local_address %>
+    <%= form.text_area :local_address  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :local_pin %>
+    <%= form.number_field :local_pin  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :l_mobile_no %>
+    <%= form.text_field :l_mobile_no  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :l_tele_no %>
+    <%= form.text_field :l_tele_no  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :kodagu_address %>
+    <%= form.text_area :kodagu_address  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :k_pin %>
+    <%= form.number_field :k_pin  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :k_mobile_no %>
+    <%= form.text_field :k_mobile_no  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :k_tele_no %>
+    <%= form.text_field :k_tele_no  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :nominee_of_death_fund %>
+    <%= form.text_field :nominee_of_death_fund  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :form_date %>
+    <%= form.date_select :form_date  ,class:"form-control"%>
+  </div>
+
+  <div class="form-group row">
+    <%= form.label :applicants_sign %>
+    <%= form.text_field :applicants_sign  ,class:"form-control" %>
+  </div>
+
+
+  <div class="form-group row">
     <%= form.label :proposer_mobile %>
-    <%= form.text_field :proposer_mobile %>
+    <%= form.text_field :proposer_mobile  ,class:"form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :proposer_tele %>
-    <%= form.text_field :proposer_tele %>
+    <%= form.text_field :proposer_tele  ,class:"form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :proposer_memebership_no %>
-    <%= form.text_field :proposer_memebership_no %>
+    <%= form.text_field :proposer_memebership_no  ,class:"form-control"%>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :proposer_sign %>
     <%= form.text_field :proposer_sign %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :seconder_family_name %>
     <%= form.text_field :seconder_family_name %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :seconder_mobile %>
     <%= form.text_field :seconder_mobile %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :seconder_tele %>
     <%= form.text_field :seconder_tele %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :seconder_memebership_no %>
     <%= form.text_field :seconder_memebership_no %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :seconder_sign %>
     <%= form.text_field :seconder_sign %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :status %>
     <%= form.text_field :status %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :user_id %>
     <%= form.number_field :user_id %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :membership_fee %>
     <%= form.text_field :membership_fee %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :receipt_no %>
     <%= form.text_field :receipt_no %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :cash_dd %>
     <%= form.text_field :cash_dd %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :receipt_date %>
     <%= form.date_select :receipt_date %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :president_sign %>
     <%= form.text_field :president_sign %>
   </div>
 
-  <div class="field">
+  <div class="form-group row">
     <%= form.label :hon_secretary_sign %>
     <%= form.text_field :hon_secretary_sign %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
+  </div>
   </div>
 <% end %>

@@ -20,6 +20,7 @@
       <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
     <% end %>
   </div>
+  <%= f.hidden_field :role_id, :value =>  Role.find_by(name: "User").id%>
 
   <div class="form-group">
     <%= f.label :password_confirmation %>
