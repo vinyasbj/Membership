@@ -68,13 +68,6 @@
     </div>
   </div>
 
-  <div class="form-group row">
-    <label class="col-sm-4 col-form-label"> <%= form.label :proposer_family_name %> </label>
-    <div class="col-sm-8">
-      <%= form.text_field :proposer_family_name  ,class:"form-control"%>
-    </div>
-  </div>
-
   <%
 =begin%>
  <div class="form-group row">
@@ -175,49 +168,83 @@
     </div>
   </div>
 
+  <%
+=begin%>
+ <table class="table table-dark">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr> 
+    
+    </tr>
+  </tbody> 
+<%
+=end%>
+
   <div class="form-group row">
-    <%= form.label :proposer_mobile %>
-    <%= form.text_field :proposer_mobile  ,class:"form-control"%>
+    <div class="form-group col-md-3">
+      <label class=""> Proposer with Family Name </label>
+      <%= form.text_field :proposer_family_name  ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :proposer_mobile %>
+      <%= form.text_field :proposer_mobile  ,class:"form-control"%>
+      <br>
+      <%= form.label :proposer_tele %>
+      <%= form.text_field :proposer_tele  ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :proposer_memebership_no %>
+      <%= form.text_field :proposer_memebership_no  ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :proposer_sign %>
+      <%= form.text_field :proposer_sign ,class:"form-control"%>
+    </div>
   </div>
 
   <div class="form-group row">
-    <%= form.label :proposer_tele %>
-    <%= form.text_field :proposer_tele  ,class:"form-control"%>
+    <div class="form-group col-md-3">
+      <%= form.label :seconder_family_name %>
+      <%= form.text_field :seconder_family_name ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :seconder_mobile %>
+      <%= form.text_field :seconder_mobile,class:"form-control" %>
+      <br>
+      <%= form.label :seconder_tele %>
+      <%= form.text_field :seconder_tele ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :seconder_memebership_no %>
+      <%= form.text_field :seconder_memebership_no ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :seconder_sign %>
+      <%= form.text_field :seconder_sign ,class:"form-control"%>
+    </div>
+  </div>
+
+<h6>The Proposer and the Seconder should know the full details of the applicant.</h6>
+
+
+
+  <div class="form-group row">
   </div>
 
   <div class="form-group row">
-    <%= form.label :proposer_memebership_no %>
-    <%= form.text_field :proposer_memebership_no  ,class:"form-control"%>
   </div>
 
   <div class="form-group row">
-    <%= form.label :proposer_sign %>
-    <%= form.text_field :proposer_sign %>
   </div>
 
   <div class="form-group row">
-    <%= form.label :seconder_family_name %>
-    <%= form.text_field :seconder_family_name %>
   </div>
 
   <div class="form-group row">
-    <%= form.label :seconder_mobile %>
-    <%= form.text_field :seconder_mobile %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :seconder_tele %>
-    <%= form.text_field :seconder_tele %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :seconder_memebership_no %>
-    <%= form.text_field :seconder_memebership_no %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :seconder_sign %>
-    <%= form.text_field :seconder_sign %>
   </div>
 
   <div class="form-group row">
