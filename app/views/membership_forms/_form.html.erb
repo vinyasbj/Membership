@@ -228,64 +228,56 @@
     </div>
   </div>
 
-<h6>The Proposer and the Seconder should know the full details of the applicant.</h6>
-
-
+  <h6>The Proposer and the Seconder should know the full details of the applicant.</h6>
 
   <div class="form-group row">
+    <div class="form-group col-md-3">
+      <%= form.label :membership_fee %>
+      <%= form.text_field :membership_fee ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-3">
+      <%= form.label :receipt_no %>
+      <%= form.text_field :receipt_no ,class:"form-control"%>
+    </div>
   </div>
 
   <div class="form-group row">
+    <div class="form-group col-md-3">
+      <%= form.label :cash_dd %>
+      <%= form.text_field :cash_dd ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :receipt_date %>
+    <br>
+      <%= form.date_select :receipt_date ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :status %>
+      <%= form.text_field :status ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="form-group row">
-  </div>
-
-  <div class="form-group row">
-  </div>
-
-  <div class="form-group row">
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :status %>
-    <%= form.text_field :status %>
-  </div>
-
-  <div class="form-group row">
+  <%
+=begin%>
+ <div class="form-group row">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
+    <%= form.number_field :user_id,class:"form-control" %>
+  </div> 
+<%
+=end%>
+
 
   <div class="form-group row">
-    <%= form.label :membership_fee %>
-    <%= form.text_field :membership_fee %>
+    <div class="form-group col-md-4">
+      <%= form.label :president_sign %>
+      <%= form.text_field :president_sign ,class:"form-control"%>
+    </div>
+    <div class="form-group col-md-4">
+      <%= form.label :hon_secretary_sign %>
+      <%= form.text_field :hon_secretary_sign ,class:"form-control"%>
+    </div>
   </div>
 
-  <div class="form-group row">
-    <%= form.label :receipt_no %>
-    <%= form.text_field :receipt_no %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :cash_dd %>
-    <%= form.text_field :cash_dd %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :receipt_date %>
-    <%= form.date_select :receipt_date %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :president_sign %>
-    <%= form.text_field :president_sign %>
-  </div>
-
-  <div class="form-group row">
-    <%= form.label :hon_secretary_sign %>
-    <%= form.text_field :hon_secretary_sign %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
