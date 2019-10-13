@@ -1,5 +1,7 @@
-<h1>New Membership Form</h1>
 
 <%= render 'form', membership_form: @membership_form %>
-
-<%= link_to 'Back', membership_forms_path %>
+<%# if current_user.role.name == "User" %>
+<%#= link_to 'Home', home_path %>
+<%#else%>
+<%#= link_to 'Back', membership_forms_path %>
+<%#end%>

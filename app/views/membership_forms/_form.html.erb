@@ -1,3 +1,12 @@
+
+ <div class="row">
+  <div class="col-md-12">
+  <h1 style="text-align: center;">KODAVA SAMAJA (R)</h1>
+  <p style="text-align: center;">No. 7, 1st Main Road, Vasanthanagar, Bangalore - 560 052
+  Phone : 2226 0188 / 2235 1088</p>
+          <p style="text-align: center;">APPLICATION FOR MEMBERSHIP</p>
+  </div>
+</div> 
 <%= form_with(model: membership_form, local: true) do |form| %>
   <% if membership_form.errors.any? %>
     <div id="error_explanation">
@@ -21,7 +30,7 @@
   <div class="form-group row">
     <label class="col-sm-4 col-form-label">Father’s Name with Family Name</label>
     <div class="col-sm-8">
-      <%= form.text_field :father_name ,class:"form-control", style:"border: 0;outline: 0;background: transparent;border-bottom: 1px solid black;"%>
+      <%= form.text_field :father_name ,class:"form-control"%>
     </div>
   </div>
 
@@ -31,6 +40,7 @@
     <%= form.text_field :mother_name ,class:"form-control"%>
     </div>
   </div>
+
   <h4>IF MARRIED</h4>
 
   <div class="form-group row">
@@ -95,15 +105,15 @@
     <div class="form-group col-md-3">
       <label for="inputZip">Sex</label>
       <br>
-      <%#= form.text_field :sex ,class:"form-control" %>
-      <%= form.select :sec, options_for_sex, :prompt => 'Select One',class: "form-control" %>
+      <%= form.select :sex, options_for_sex, :prompt => 'Select One',class: "form-control" %>
     </div>
     <div class="form-group col-md-3">
       <label for="inputZip">Blood Group</label>
       <%= form.text_field :blood_group ,class:"form-control" %>
     </div>
   </div>
-
+  <%= form.hidden_field :user_id, :value =>  current_user.id,class:"form-control" %>
+  <%= form.hidden_field :admin_id, :value =>  current_user.id,class:"form-control" %>
   <div class="form-group row">
     <%= form.label :local_address %>
     <%= form.text_area :local_address  ,class:"form-control"%>
@@ -251,10 +261,13 @@
     <br>
       <%= form.date_select :receipt_date ,class:"form-control"%>
     </div>
+    <% if current_user.role.name == "Admin" || current_user.role.name == "Super Admin"  %>
     <div class="form-group col-md-4">
       <%= form.label :status %>
-      <%= form.text_field :status ,class:"form-control"%>
+      <%#= form.text_field :status ,class:"form-control"%>
+      <%= form.select :status, status, :prompt => 'Select One',class: "form-control" %>
     </div>
+    <% end %>
   </div>
 
   <%
@@ -280,7 +293,14 @@
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Submit",class: "btn btn-primary"%>
+    <% if current_user.role.name == "User" %>
+      <%= link_to 'Home', home_path ,class: "btn btn-light"%>
+      <br>
+    <%else%>
+      <%= link_to 'Back', membership_forms_path ,class: "btn btn-primary"%>
+    <%end%>
+    <br>
   </div>
   </div>
 <% end %>

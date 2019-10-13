@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Membership Forms</h1>
+<h3>All Membership Forms</h3>
 
-<table>
+<%= button_to 'Create Membership Form', new_membership_form_path,class: "btn-btn primary",method: "get" %>
+<br>
+<table class="table table-dark">
   <thead>
     <tr>
       <th>Name</th>
@@ -11,12 +13,8 @@
       <th>Age</th>
       <th>Dob</th>
       <th>Sex</th>
-      <th>Blood group</th>
-      <th>Local address</th>
-      <th>Local pin</th>
-      
       <th>Status</th>
-      <th>User</th>
+      <th>Admin</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,12 +28,8 @@
         <td><%= membership_form.age %></td>
         <td><%= membership_form.dob %></td>
         <td><%= membership_form.sex %></td>
-        <td><%= membership_form.blood_group %></td>
-        <td><%= membership_form.local_address %></td>
-        <td><%= membership_form.local_pin %></td>
-        
         <td><%= membership_form.status %></td>
-        <td><%= membership_form.user_id %></td>
+        <td><%= membership_form.admin.name %></td>
         <td><%= link_to 'Show', membership_form %></td>
         <td><%= link_to 'Edit', edit_membership_form_path(membership_form) %></td>
         <td><%= link_to 'Destroy', membership_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -46,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Membership Form', new_membership_form_path %>
+
