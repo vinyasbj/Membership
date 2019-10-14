@@ -1,5 +1,5 @@
 class MembershipFormsController < ApplicationController
-  load_and_authorize_resource param_method: :my_sanitizer
+  # load_and_authorize_resource param_method: :my_sanitizer
   before_action :set_membership_form, only: [:show, :edit, :update, :destroy]
 
   # GET /membership_forms
