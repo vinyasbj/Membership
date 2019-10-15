@@ -1,27 +1,52 @@
-<h2 style="text-align: center;">Welcome To KODAVA SAMAJA (R) Member Ship Form</h2>
-<%if current_user.membership_form.present? %>
-    <div class="card mb-3" style="max-width: 540px;">
-        <div class="row no-gutters">
-            <div class="col-md-4">
-            <img src="..." class="card-img" alt="...">
-            </div>
-            <div class="col-md-6">
-                <div class="card-body">
-                    <h5 class="card-title"><%= @membership_form.name %></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <% if user_signed_in? %>
+            <%= link_to  "Sign Out", destroy_user_session_path , :method => 'delete'%>
+        <%else%>
+            <%= link_to  "Sign In" ,user_session_path %>
+        <%end%>
+<%#if current_user.membership_form.present? %>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h5 class="card-title">Hello,<%= current_user.name %></h5>
+                            <p><%= current_user.email%></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <% if current_user.membership_form.nil?%>
+                            <p style="text-align: center">If you dont have MemberShip Click  the Button</p>
+                            <%= link_to 'Create Membership', new_membership_form_path,class: "btn btn-primary",method: "get",style: "margin-top: 0px" %>
+                        <%end%>
+                        <p></p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <p>asdasd</p>
+        </div>
+        <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                <img src="<%= @membership_form.image %>" class="card-img" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Name:</b><%= @membership_form.name %></h5>
+                        <h6 class="card-title"><b>Father Name:</b><%= @membership_form.father_name %></h6>
+                        <h6 class="card-title"><b>Mother Name:</b><%= @membership_form.mother_name %></h6>
+                        <h6 class="card-title"><b>Age:</b><%= @membership_form.age %></h6>
+                        <p><b>Status:</b> <%= @membership_form.status%> </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <br>
+                    <h5 class="card-title"><%= link_to 'Show', @membership_form,class: "btn btn-primary" %></h5>
+                    <h5 class="card-title"><%= link_to 'Edit', edit_membership_form_path(@membership_form),class: "btn btn-primary" %></h5>
+                    <h5 class="card-title"><%= link_to 'Destroy', @membership_form, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-primary"%></h5>
+                </div>
             </div>
         </div>
-    </div>
-<% else %>
-    <br>
-    <div class="card">
-        <div class="card-body">
-            If you dont have MemberShip Click  the Button  <%= link_to 'Create Membership', new_membership_form_path,class: "btn btn-primary",method: "get" %>
         </div>
     </div>
-<%end%>

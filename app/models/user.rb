@@ -5,7 +5,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :role
   has_one :membership_form
-
+  # has_many :membership_forms
+  # , -> (membership_form) {where.not(admin_id: nil)}
+  has_many :admin_forms, :foreign_key => "admin_id", :class_name => "MembershipForm"
+  # , -> {includes(:user).where(: {name: ["Admin","Super Admin"]})}
   # before_create :assign_role
 
   # def assign_role

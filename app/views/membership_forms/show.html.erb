@@ -204,6 +204,8 @@
   <strong>Hon secretary sign:</strong>
   <%= @membership_form.hon_secretary_sign %>
 </p>
+<%#= image_tag  @membership_form.image%>
+<img src=<%= @membership_form.image%>/>
 
 <%= link_to 'Edit', edit_membership_form_path(@membership_form) %> |
 <%= link_to 'Back', membership_forms_path %>

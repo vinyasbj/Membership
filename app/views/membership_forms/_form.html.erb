@@ -112,8 +112,8 @@
       <%= form.text_field :blood_group ,class:"form-control" %>
     </div>
   </div>
-  <%= form.hidden_field :user_id, :value =>  current_user.id,class:"form-control" %>
-  <%#= form.hidden_field :admin_id, :value =>  current_user.id,class:"form-control" %>
+
+  
   <div class="form-group row">
     <%= form.label :local_address %>
     <%= form.text_area :local_address  ,class:"form-control"%>
@@ -262,11 +262,13 @@
       <%= form.date_select :receipt_date ,class:"form-control"%>
     </div>
     <% if current_user.role.name == "Admin" || current_user.role.name == "Super Admin"  %>
-    <div class="form-group col-md-4">
-      <%= form.label :status %>
-      <%#= form.text_field :status ,class:"form-control"%>
-      <%= form.select :status, status, :prompt => 'Select One',class: "form-control" %>
-    </div>
+      <div class="form-group col-md-4">
+        <%= form.label :status %>
+        <%= form.select :status, status, :prompt => 'Select One',class: "form-control" %>
+      </div>
+        <%= form.hidden_field :admin_id, :value =>  current_user.id,class:"form-control" %>
+    <%else%>
+      <%= form.hidden_field :user_id, :value =>  current_user.id,class:"form-control" %>
     <% end %>
   </div>
 
