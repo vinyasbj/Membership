@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  attr_writer :mobile
   belongs_to :role
   has_one :membership_form
   # has_many :membership_forms
@@ -16,4 +17,9 @@ class User < ApplicationRecord
   #   role = Role.find_by(name: "User")
   #   self.role_id = role.id
   # end
+
+  def mobile
+    @mobile || self.mobile || self.email
+  end
+
 end
