@@ -1,0 +1,302 @@
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.table-data{
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+}
+
+/*tr:nth-child(even) {
+  background-color: #dddddd;
+}*/
+    .headcss{
+        background:#C40316;
+        color:white;
+    }
+    .txtcss{
+      font-size: 15px;
+
+    }
+    .textheader{
+      /* color: #c40316!important; */
+    }
+    td,th{
+      border: none;
+    }
+    span{
+      
+    }
+</style>
+ <div class="row">
+  <div class="col-md-12">
+  <h1 style="text-align: center;">KODAVA SAMAJA (R)</h1>
+  <p style="text-align: center;">No. 7, 1st Main Road, Vasanthanagar, Bangalore - 560 052
+  Phone : 2226 0188 / 2235 1088</p>
+          <p style="text-align: center;">APPLICATION FOR MEMBERSHIP</p> 
+          <p style="text-align: center;">(Use BLOCK Letters)</p>
+  </div>
+</div> 
+<table>
+    <td class="textheader">
+  <strong>Name with Initials and Family Name:</strong> <span style="text-decoration: underline;"><%= @membership_form.name %></span>
+ </td>
+</table>
+<table>
+    <td class="textheader">
+  <strong>Father's Name with Family Name</strong> <span style="text-decoration: underline;"><%= @membership_form.father_name %></span>
+    </td>
+</table>
+
+<table>
+    <td class="textheader">
+  <strong>Mother's Name with Family Name (Thamane)</strong> <span style="text-decoration: underline;"><%= @membership_form.mother_name %>
+    </td>
+</table>
+
+    IF MARRIED
+
+  <table>
+      <td class="textheader">
+  <strong>(a) Husband's Name with Family Name</strong> <span style="text-decoration: underline;"><%= @membership_form.husband_name %></span>
+    </td>
+</table>
+
+<table>
+    <td class="textheader">
+  <strong>(b) Husband's Mother's Family Name </strong> <span style="text-decoration: underline;"><%= @membership_form.husbands_mother_name %></span>
+    </td >
+</table>
+
+<table>
+  <td class="textheader">
+  <strong>(c) Wife's Name with Family Name (Thamane)</strong>
+    <span style="text-decoration: underline;"> <%= @membership_form.wifes_name %></span>
+  </td>
+</table>
+<table>
+<td class="textheader">
+  <strong>(d) Number of members in the family</strong>
+</td>
+<td><span style="text-decoration: underline;"><%= @membership_form.no_family_members %></span></td>
+<td class="textheader">
+  <strong>(e) Occupation of the Members</strong>
+</td>
+<td><span style="text-decoration: underline;"><%= @membership_form.occupation %></span></td>
+</tr>
+</table>
+</div>
+<table>
+  <td>
+    <strong>Age:</strong>
+  </td>
+  <td>
+    <%= @membership_form.age %>
+  </td>
+<td>
+  <strong>Dob:</strong>
+</td>
+<td>
+  <%= @membership_form.dob %>
+</td>
+<td>
+  <strong>Sex:</strong>
+</td>
+<td>
+  <%= @membership_form.sex %>
+</td>
+<td>
+   <strong>Blood group:</strong>
+</td>
+<td>
+  <%= @membership_form.blood_group %>
+</td>
+</table>
+
+<table>
+  <td class="textheader">
+    <strong>Local address:</strong>
+  </td>
+  <td class="textheader">
+    <%= @membership_form.local_address %>
+  </td>
+</table>
+<table>
+  <td class="textheader">
+    <strong>Local pin:</strong>
+    <%= @membership_form.local_pin %>
+  </td>
+  <td class="textheader">
+  <strong>L mobile no:</strong>
+  <%= @membership_form.l_mobile_no %>
+  </td>
+  <td class="textheader">
+  <strong>L tele no:</strong>
+  <%= @membership_form.l_tele_no %>
+  </td>
+</table>
+
+<table>
+  <td class="textheader">
+    <strong>Kodagu address:</strong>
+    <%= @membership_form.kodagu_address %>
+  </td>
+</table>
+
+<table>
+  <td class="textheader">
+    <strong>K pin:</strong>
+    <%= @membership_form.k_pin %>
+  </td>
+  <td class="textheader">
+    <strong>K mobile no:</strong>
+    <%= @membership_form.k_mobile_no %>
+  </td>
+  <td class="textheader">
+    <strong>K tele no:</strong>
+    <%= @membership_form.k_tele_no %>
+  </td>
+</table>
+
+<table>
+  <td class="textheader">
+    <strong>Nominee of death fund:</strong>
+    <%= @membership_form.nominee_of_death_fund %>
+  </td>
+</table>
+<table> 
+Kindly enroll me as a Life / Associate Member of the Kodava Samaja, Bangalore. I agree to abide by the rules
+and regulations of the Bye-Law of the Samaja.
+</table>
+<br>
+<table>
+  <td class="textheader">
+    <strong>Form date:</strong>
+    <%= @membership_form.form_date %>
+  </td>
+  <td class="textheader" style="padding-left: 50%">
+    <strong>Applicants sign:</strong>
+    <%= @membership_form.applicants_sign %>
+  </td>
+</table>
+
+<table style="border: 1px solid">
+  <th class="table-data">
+    Name
+  </th>
+  <th class="table-data">
+    Phone
+  </th>
+  <th class="table-data" >
+    Membership No.
+  </th>
+  <th class="table-data" >
+    Signature
+  </th>
+  <tr>
+    <td class="table-data">
+      <strong>Proposer family name:</strong> <br>
+      <span><%= @membership_form.proposer_family_name %></span>
+    </td>
+    <td class="table-data">
+      <strong>Proposer mobile:</strong><br>
+      <%= @membership_form.proposer_mobile %>
+      <br>
+      <strong>Proposer tele:</strong><br>
+      <%= @membership_form.proposer_tele %>
+    </td>
+
+    <td class="table-data">
+      <!-- <strong>Proposer memebership no:</strong><br> -->
+      <%= @membership_form.proposer_memebership_no %>
+    </td>
+
+    <td class="table-data">
+      <strong>Proposer sign:</strong><br>
+      <%= @membership_form.proposer_sign %>
+    </td>
+  </tr>
+  <tr>
+    <td class="table-data">
+      <strong>Seconder family name:</strong><br>
+      <%= @membership_form.seconder_family_name %>
+    </td>
+
+    <td class="table-data">
+      <strong>Seconder mobile:</strong><br>
+      <%= @membership_form.seconder_mobile %>
+      <br>
+      <strong>Seconder tele:</strong><br>
+      <%= @membership_form.seconder_tele %>
+    </td>
+
+    <td class="table-data">
+      <!-- <strong>Seconder memebership no:</strong><br> -->
+      <%= @membership_form.seconder_memebership_no %>
+    </td>
+
+    <td class="table-data">
+      <strong>Seconder sign:</strong><br>
+      <%= @membership_form.seconder_sign %>
+    </td>
+  </th>
+</table>
+
+
+<p>The Proposer and the Seconder should know the full details of the applicant.</p>
+  <table style="border: 1px solid black; width: 45%">
+  <tr>
+  <td>
+    <strong>Membership fee: Rs</strong>  <%= @membership_form.membership_fee %>
+    <strong style="padding-left: 10%" >Receipt no:</strong>  <%= @membership_form.receipt_no %>
+  </td>
+  </tr>
+  <td>
+    <strong>Cash dd:</strong> <%= @membership_form.cash_dd %>
+    <strong style="padding-left: 25%" >Date: </strong> <%= Date.today %>
+  </td>
+</table>
+<%
+=begin%>
+ <p>
+  <strong>Status:</strong>
+  <%= @membership_form.status %>
+</p>
+<p>
+  <strong>Receipt date:</strong>
+  <%= @membership_form.receipt_date %>
+</p> 
+<%
+=end%>
+<br>
+<table>
+  <tr>
+    <th class="textheader">
+      <%= @membership_form.president_sign %>
+      <br>
+      <strong>President sign:</strong>
+    </th>
+    <th class="textheader" style="padding-left: 60%">
+      <%= @membership_form.hon_secretary_sign %>
+      <br>
+      <strong>Hon secretary sign:</strong>
+    </th>
+  </tr>
+</table>
+<p>
+</p>
+
+<p>
+</p>
+<%#= image_tag  @membership_form.image%>
+<img src=<%= @membership_form.image%>/>

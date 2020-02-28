@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/form/:id', action: :form, controller: 'membership_forms', to: "membership_forms#form",as: :form
   resources :membership_forms
   get '/home' ,to: "membership_forms#home",as: :home
   resources :roles

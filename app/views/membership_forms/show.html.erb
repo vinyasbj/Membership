@@ -1,19 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @membership_form.name %>
+  <strong>Name with Initials and Family Name:</strong> <%= @membership_form.name %>
 </p>
 
 <p>
-  <strong>Father name:</strong>
-  <%= @membership_form.father_name %>
+  <strong>Father's Name with Family Name</strong> <%= @membership_form.father_name %>
 </p>
 
 <p>
-  <strong>Mother name:</strong>
-  <%= @membership_form.mother_name %>
+  <strong>Mother's Name with Family Name (Thamane)</strong> <%= @membership_form.mother_name %>
 </p>
+
+IF MARRIED
+
+  <p>
+  <strong>(a) Husband's Name with Family Name</strong><%= @membership_form.husband_name %>
+</p>
+
+<p>
+  <strong>(b) Husband's Mother's Family Name </strong> <%= @membership_form.husbands_mother_name %>
+</p>
+
+<p>
+  <strong>(c) Wife's Name with Family Name (Thamane)</strong>
+  <%= @membership_form.wifes_name %>
+</p>
+<div class="container">
+<div class="row">
+  <div class="col">
+    <p>
+      <strong>d) Number of members in the family</strong>
+      <%= @membership_form.no_family_members %>
+    </p>
+  </div>
+  <div class="col">
+    <p>
+      <strong>(e) Occupation of the Members</strong>
+      <%= @membership_form.occupation %>
+    </p>
+  </div>
+</div>
+
+</div>
+
 
 <p>
   <strong>Age:</strong>
@@ -90,30 +120,7 @@
   <%= @membership_form.applicants_sign %>
 </p>
 
-<p>
-  <strong>Husband name:</strong>
-  <%= @membership_form.husband_name %>
-</p>
 
-<p>
-  <strong>Husbands mother name:</strong>
-  <%= @membership_form.husbands_mother_name %>
-</p>
-
-<p>
-  <strong>Wifes name:</strong>
-  <%= @membership_form.wifes_name %>
-</p>
-
-<p>
-  <strong>No family members:</strong>
-  <%= @membership_form.no_family_members %>
-</p>
-
-<p>
-  <strong>Occupation:</strong>
-  <%= @membership_form.occupation %>
-</p>
 
 <p>
   <strong>Proposer family name:</strong>

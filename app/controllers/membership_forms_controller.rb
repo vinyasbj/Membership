@@ -1,6 +1,6 @@
 class MembershipFormsController < ApplicationController
-  load_and_authorize_resource param_method: :my_sanitizer
-  before_action :set_membership_form, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource param_method: :my_sanitizer ,except: :form
+  before_action :set_membership_form, only: [:show, :edit, :update, :destroy,:form]
 
   # GET /membership_forms
   # GET /membership_forms.json
@@ -11,6 +11,21 @@ class MembershipFormsController < ApplicationController
   # GET /membership_forms/1
   # GET /membership_forms/1.json
   def show
+    respond_to do |format|
+      format.html
+      format.pdf  do 
+        render pdf: "membership",template: 'membership_forms/show.html.erb'
+      end
+    end
+  end
+
+  def form
+    respond_to do |format|
+      format.html
+      format.pdf  do 
+        render pdf: "membership",template: 'membership_forms/form.html.erb'
+      end
+    end
   end
 
   def home

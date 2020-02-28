@@ -32,7 +32,9 @@ gem 'devise'
 gem 'devise-bootstrap-views', '~> 0.0.7'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+# gem 'wkhtmltopdf-binary-edge'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

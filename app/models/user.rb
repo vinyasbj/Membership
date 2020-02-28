@@ -3,23 +3,13 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  attr_writer :mobile
+  # attr_writer :mobile
   belongs_to :role
   has_one :membership_form
+  # validates :mobile, presence: true
+  # , minimum: 10, maximum: 10
   # has_many :membership_forms
   # , -> (membership_form) {where.not(admin_id: nil)}
   has_many :admin_forms, :foreign_key => "admin_id", :class_name => "MembershipForm"
-  # , -> {includes(:user).where(: {name: ["Admin","Super Admin"]})}
-  # before_create :assign_role
-
-  # def assign_role
-  #   binding.pry
-  #   role = Role.find_by(name: "User")
-  #   self.role_id = role.id
-  # end
-
-  def mobile
-    @mobile || self.mobile || self.email
-  end
 
 end
