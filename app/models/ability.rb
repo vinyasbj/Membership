@@ -6,7 +6,7 @@ class Ability
   def initialize(user)
     
     if user.role.name == "Admin" || user.role.name == "Super Admin"
-      can [:create,:new,:index,:show,:edit ,:update, :destroy,:home], MembershipForm
+      can [:create,:new,:index,:show,:edit ,:update, :destroy,:home,:form], MembershipForm
     else
       can [:create,:new,:show,:edit,:update,:home], MembershipForm
     end
