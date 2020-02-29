@@ -8,10 +8,10 @@ class MembershipForm < ApplicationRecord
     before_update :change_status
 
     def change_status
-        if self.status_changed?
-            binding.pry
-            StatusMailer.status_change(self).deliver_now
-        end
-        binding.pry
+        # if self.status_changed?
+        #     # binding.pry
+        #     StatusMailer.status_change(self).deliver_now
+        # end
+        # binding.pry
     end
 end
