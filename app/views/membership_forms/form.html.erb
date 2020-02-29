@@ -37,6 +37,19 @@ td, th {
     span{
       
     }
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #fff;
+      padding: none;
+    }
+    .grid-item {
+      /* background-color: rgba(255, 255, 255, 0.8); */
+      /* border: 1px solid rgba(0, 0, 0, 0.8); */
+      padding: 20px;
+      /* font-size: 30px; */
+      text-align: center;
+    }
 </style>
  <div class="row">
   <div class="col-md-12">
@@ -254,18 +267,30 @@ and regulations of the Bye-Law of the Samaja.
 
 
 <p>The Proposer and the Seconder should know the full details of the applicant.</p>
-  <table style="border: 1px solid black; width: 45%">
-  <tr>
-  <td>
-    <strong>Membership fee: Rs</strong>  <%= @membership_form.membership_fee %>
-    <strong style="padding-left: 10%" >Receipt no:</strong>  <%= @membership_form.receipt_no %>
-  </td>
-  </tr>
-  <td>
-    <strong>Cash dd:</strong> <%= @membership_form.cash_dd %>
-    <strong style="padding-left: 25%" >Date: </strong> <%= Date.today %>
-  </td>
-</table>
+<div class="row">
+  <div class="col-sm-9" >
+    <table style="border: 1px solid black;width: 45%">
+      <tr>
+        <td>
+          <strong>Membership fee: Rs</strong>  <%= @membership_form.membership_fee %>
+          <strong style="padding-left: 10%" >Receipt no:</strong>  <%= @membership_form.receipt_no %>
+        </td>
+      </tr>
+      <td>
+        <strong>Cash dd:</strong> <%= @membership_form.cash_dd %>
+        <strong style="padding-left: 25%" >Date: </strong> <%= Date.today %>
+      </td>
+    </table>
+  </div>
+  <div class="col-sm-3">
+    <table>
+      <td class="textheader">
+        <p>Decision of the Managing Committee</p>
+        Membership  <%= @membership_form.status %>
+      </td>
+    </table>
+  </div>
+</div>
 <%
 =begin%>
  <p>
@@ -281,22 +306,18 @@ and regulations of the Bye-Law of the Samaja.
 <br>
 <table>
   <tr>
-    <th class="textheader">
+    <td class="textheader">
       <%= @membership_form.president_sign %>
       <br>
-      <strong>President sign:</strong>
-    </th>
-    <th class="textheader" style="padding-left: 60%">
+      <strong>President sign</strong>
+    </td>
+    <td class="textheader" style="padding-left: 60%">
       <%= @membership_form.hon_secretary_sign %>
       <br>
-      <strong>Hon secretary sign:</strong>
-    </th>
+      <strong>Hon secretary sign</strong>
+    </td>
   </tr>
 </table>
-<p>
-</p>
 
-<p>
-</p>
 <%#= image_tag  @membership_form.image%>
-<img src=<%= @membership_form.image%>/>
+<img src=<%#= @membership_form.image%>/>
