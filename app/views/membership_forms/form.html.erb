@@ -52,12 +52,13 @@ td, th {
     }
 </style>
  <div class="row">
-  <div class="col-md-12">
-  <h1 style="text-align: center;">KODAVA SAMAJA (R)</h1>
-  <p style="text-align: center;">No. 7, 1st Main Road, Vasanthanagar, Bangalore - 560 052
+  <div class="col-md-8">
+  <h1 style="text-align: left;">KODAVA SAMAJA (R)</h1>
+  <p style="text-align: left;">No. 7, 1st Main Road, Vasanthanagar, Bangalore - 560 052
   Phone : 2226 0188 / 2235 1088</p>
-          <p style="text-align: center;">APPLICATION FOR MEMBERSHIP</p> 
-          <p style="text-align: center;">(Use BLOCK Letters)</p>
+          <p style="text-align: left;">APPLICATION FOR MEMBERSHIP</p> 
+          <p style="text-align: left;">(Use BLOCK Letters)</p>
+  <%= wicked_pdf_image_tag  @membership_form.image ,style: "padding-left: 85% ; width: 140px; height: 145px;margin-top: -140px;"  %>
   </div>
 </div> 
 <table>
@@ -319,5 +320,3 @@ and regulations of the Bye-Law of the Samaja.
   </tr>
 </table>
 
-<%#= image_tag  @membership_form.image%>
-<img src=<%#= @membership_form.image%>/>
